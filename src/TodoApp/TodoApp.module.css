@@ -1,0 +1,10 @@
+.TodoApp {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem auto;
+  max-width: 350px;
+  border: 1px rgba(255, 255, 255, 0.1) solid;
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
