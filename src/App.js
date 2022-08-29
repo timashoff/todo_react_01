@@ -1,6 +1,5 @@
 import './App.css'
 import { TodoApp } from './TodoApp/TodoApp'
-import { TodoForm } from './TodoApp/TodoForm'
 
 function App() {
   return (

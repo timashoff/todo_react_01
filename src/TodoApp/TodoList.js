@@ -1,13 +1,12 @@
 import { Todo } from './Todo'
 import styles from './TodoList.module.css'
 
-export const TodoList = () => {
+export const TodoList = ({ todos, todoToggle }) => {
   return (
     <div className={styles.TodoList}>
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
+      {todos.map((todo) => (
+        <Todo todo={todo} key={todo.id} todoToggle={todoToggle} />
+      ))}
     </div>
   )
 }
