@@ -25,12 +25,34 @@ export const TodoApp = () => {
       )
     )
 
+  const todoDelHandler = (index) =>
+    setTodos(todos.filter((todo) => todo.id !== index))
+
+  const clearAllHandler = () => setTodos([])
+  const clearDoneHandler = () =>
+    setTodos(todos.filter((todo) => !todo.isCompleted))
+
+  const doneCount = todos.filter((todo) => todo.isCompleted).length
+  const doneTask = doneCount > 1 ? `${doneCount} tasks` : `${doneCount} task`
+
   return (
     <div className={styles.TodoApp}>
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodoList todos={todos} todoToggle={todoToggleHandler} />
-      <TodoActions />
+      {!todos.length && <p>...there are no new challenges here</p>}
+      <TodoList
+        todos={todos}
+        todoToggle={todoToggleHandler}
+        todoDel={todoDelHandler}
+      />
+      {!!todos.length && (
+        <TodoActions
+          clearAll={clearAllHandler}
+          clearDone={clearDoneHandler}
+          doneCount={doneCount}
+        />
+      )}
+      {!!doneCount && <p>you have done {doneTask}</p>}
     </div>
   )
 }
