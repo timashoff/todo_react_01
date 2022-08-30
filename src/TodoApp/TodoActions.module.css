@@ -1,0 +1,15 @@
+.TodoActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.iconDellAll {
+  color: red;
+}
+
+:disabled,
+:disabled:hover {
+  color: rgba(128, 128, 128, 0.3);
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}

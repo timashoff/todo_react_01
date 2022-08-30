@@ -19,6 +19,7 @@
 .iconDone,
 .iconDelete {
   font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.809);
 }
 
 .iconDone:hover,
@@ -27,11 +28,11 @@
 }
 
 .iconGreen:hover {
-  color: rgba(106, 142, 35, 0.7);
+  color: aquamarine;
 }
 
 .iconDelete:hover {
-  color: red;
+  color: salmon;
 }
 
 .TodoDone {

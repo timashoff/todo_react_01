@@ -1,6 +1,7 @@
 .TodoForm {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -8,8 +9,4 @@
   flex: 1;
   padding: 0.2rem 0.3rem;
   font-size: 1rem;
-}
-
-.TodoForm button {
-  width: 3rem;
 }
